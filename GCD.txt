@@ -1,0 +1,17 @@
+# Python Program for finding the GCD of two numbers
+
+#Enter the vlaues of two numbers
+
+num1 = int(input("Enter the first number : "))
+num2 = int(input("Enter the second number : "))
+
+#Initializing the GCD as 1
+gcd = 1
+
+#finding the GCD of two numbers using for loop
+for i in range(1,min(num1,num2)+1):
+    if num1 % i == 0 and num2 % i == 0:
+        gcd = i
+
+#Printing the result
+print("GCD of ",num1, " and ",num2," is ",gcd)

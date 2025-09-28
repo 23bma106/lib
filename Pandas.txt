@@ -1,0 +1,31 @@
+import pandas as pd
+
+list1 = ['Python','is','open','source']
+df = pd.DataFrame(list1)
+print(df)
+
+Data = {'Name':['Tom','Nick','Krish','Jack'],'Age':[20,21,19,18]}
+df1 = pd.DataFrame(Data)
+print(df1)
+
+# a = [16,67,12,10,23,45,72]
+
+list2 =  [16,67,12,10,23,45,72]
+df2 = pd.Series(list2)
+print(df2)
+
+df3 = pd.Series(list2,index = ['a','b','c','d','e','f','g'])
+print(df3)
+
+df4 = pd.DataFrame(list2)
+ans = df4.iloc[2,0]
+print(ans)
+
+ans2 = df4.loc
+print(ans2)
+
+dict1 = {'Col1':[11,2,13,4,77],'Col2':[46,5,61,19,52],'Col3':[7,8,12,1,11],'Col4':['a','ab','abc','cd','cde']}
+df5 = pd.DataFrame(dict1)
+print(df5)
+print(df5.loc[df5.index==2])
+print(df4.loc[2,"Col1":"Col2"])

@@ -1,0 +1,15 @@
+dict1 = {'A':'Abhi','B':'Sri','C':'Priya','D':'Ram','E':'Sri','F':'Abhi','G':'Sri','H':'Sri','I':'Ram','J':'Abhi'}
+dict2 = {}
+for value in dict1.values():
+    dict2[value]=dict2.get(value,0)+1
+    k = list(dict2.keys())
+    m = list(dict2.values())
+print(k)
+print(m)
+print("values and no of times")
+i = 0
+for key in k:
+    if  (dict2[key])>=2:
+        print(key,' ',m[i])
+        i = i +1
+    

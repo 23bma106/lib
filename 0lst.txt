@@ -1,0 +1,17 @@
+curl https://raw.githubusercontent.com/23bma106/lib/main/GCD.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Primes.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Matrix.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Greogorg Series.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS1.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS2.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS3.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/List_Functions.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Tribonacci_Sequence.txt

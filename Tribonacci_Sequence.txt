@@ -1,0 +1,13 @@
+def tribonacci(n):
+    sequence = [0, 1, 1]  # Starting values
+    while len(sequence) < n:
+        next_val = sequence[-1] + sequence[-2] + sequence[-3]
+        sequence.append(next_val)
+    return sequence[:n]
+
+# Main
+num = int(input("Enter how many terms of Tribonacci sequence: "))
+result = tribonacci(num)
+
+print("Tribonacci sequence:")
+print(*result)

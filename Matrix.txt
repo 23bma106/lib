@@ -1,0 +1,42 @@
+m = int(input("Enter rows for A: "))
+n = int(input("Enter columns for A: "))
+
+p = int(input("Enter rows for B: "))
+q = int(input("Enter columns for B: "))
+
+# For multiplication, columns of A must equal rows of B
+if n == p:
+    print("Add elements for A matrix:")
+    A = []
+    for i in range(m):
+        a = []
+        for j in range(n):
+            x = int(input(f"Enter A[{i}][{j}]: "))
+            a.append(x)
+        A.append(a)
+
+    print("Add elements for B matrix:")
+    B = []
+    for i in range(p):
+        b = []
+        for j in range(q):
+            y = int(input(f"Enter B[{i}][{j}]: "))
+            b.append(y)   
+        B.append(b)
+
+    print("The product is as follows...")
+    C = []
+    for i in range(m):
+        c = []
+        for j in range(q):
+            r = 0
+            for k in range(n):
+                r += A[i][k] * B[k][j]
+            c.append(r)
+        C.append(c)
+
+    for row in C:
+        print(*row)  
+
+else:
+    print("Matrix multiplication not possible! (columns of A must equal rows of B)")

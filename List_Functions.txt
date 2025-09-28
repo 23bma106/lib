@@ -1,0 +1,74 @@
+def menu():
+    print("\n----- LIST OPERATIONS MENU -----")
+    print("1. Add two lists")
+    print("2. Sort a list")
+    print("3. Add new element")
+    print("4. Reverse the list")
+    print("5. Repeat the list")
+    print("6. Pop an element")
+    print("7. Remove a specific element")
+    print("8. Display the list")
+    print("9. Exit")
+    print("--------------------------------")
+
+# Start with an empty list
+my_list = list(map(int, input("Enter elements of second list (space separated): ").split()))
+
+while True:
+    menu()
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        new_list = list(map(int, input("Enter elements of second list (space separated): ").split()))
+        my_list = my_list + new_list
+        print("Updated List:", my_list)
+
+    elif choice == 2:
+        my_list.sort()
+        print("Sorted List:", my_list)
+
+    elif choice == 3:
+        elem = int(input("Enter element to add: "))
+        my_list.append(elem)
+        print("Updated List:", my_list)
+
+    elif choice == 4:
+        my_list.reverse()
+        print("Reversed List:", my_list)
+
+    elif choice == 5:
+        times = int(input("Enter how many times to repeat: "))
+        my_list = my_list * times
+        print("Repeated List:", my_list)
+
+    elif choice == 6:
+        if my_list:
+            pos = int(input(f"Enter position to pop (0 to {len(my_list)-1}): "))
+            if 0 <= pos < len(my_list):
+                removed = my_list.pop(pos)
+                print(f"Removed element: {removed}")
+            else:
+                print("Invalid position!")
+        else:
+            print("List is empty!")
+
+    elif choice == 7:
+        if my_list:
+            elem = int(input("Enter element to remove: "))
+            if elem in my_list:
+                my_list.remove(elem)
+                print("Updated List:", my_list)
+            else:
+                print("Element not found!")
+        else:
+            print("List is empty!")
+
+    elif choice == 8:
+        print("Current List:", my_list)
+
+    elif choice == 9:
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")

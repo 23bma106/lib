@@ -1,0 +1,35 @@
+from scipy.integrate import *
+from numpy import *
+
+def  func4(x):
+    return x**2
+result,error = quad(func4,0,2)
+print("Result ", result)
+print("Error ", error)
+
+def func5(x,y):
+    return 9*(x**3)*(y**2)
+result,error = dblquad(func5,2,4,lambda x : 3,lambda x : 1)
+print("Result ", result)
+print("Error ", error)
+
+def inner3(x):
+    f = lambda y : 9*(x**3)*(y**2)
+    return quad (f,2,4)[0]
+result,error = quad(inner3,1,3)
+print("Result ", result)
+print("Error ", error)
+
+def func6(x,y,z):
+    return x*(y**2)+(y*z)
+result,error = tplquad(func6,1,2,lambda x : 0,lambda x : 2,lambda x,y : -1,lambda x,y : 1)
+print(f"Result, {result:.4f}")
+print(f"Error , {error:.4f}")
+
+a = 1.0
+f = lambda x,y : x*y
+g = lambda x : 0
+h = lambda y : sqrt(a**2-y**2)
+result,error = dblquad(f,0,a,g,h)                     
+print(f"Result, {result:.4f}")
+print(f"Error , {error:.4f}")

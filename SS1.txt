@@ -1,0 +1,7 @@
+
+n = int(input("Enter the last value of the series : "))
+if n <= 100:
+        ans = (n*(n+1))/2
+        print(int(ans))
+else:
+    print("Enter a valid number!")
