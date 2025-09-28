@@ -1,0 +1,31 @@
+curl https://raw.githubusercontent.com/23bma106/lib/main/GCD.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Primes.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Matrix.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Greogorg_Series.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS1.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS2.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/SS3.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/List_Functions.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Tribonacci_Sequence.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/CubicSpline.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Dictionaries.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Liner_Regression.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Numerical_int.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/Pandas.txt
+
+curl https://raw.githubusercontent.com/23bma106/lib/main/System.txt
+
+
