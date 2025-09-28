@@ -1,0 +1,41 @@
+import numpy as np
+
+# Input number of unknowns
+n = int(input("Enter the number of unknowns: "))
+
+# Augmented matrix of size n x (n+1)
+A = np.zeros((n, n+1))
+
+# Solution array
+X = np.zeros(n)
+
+# Input augmented matrix
+print("Enter the augmented matrix coefficients:")
+for i in range(n):
+    for j in range(n+1):
+        A[i][j] = float(input(f"A[{i}][{j}] = "))
+
+# Applying Gauss elimination
+for i in range(n):
+    if A[i][i] == 0.0:
+        print("Divide by zero detected!")
+        exit()
+    
+    for j in range(i+1, n):
+        ratio = A[j][i] / A[i][i]
+        for k in range(n+1):
+            A[j][k] = A[j][k] - ratio * A[i][k]
+
+# Back substitution
+X[n-1] = A[n-1][n] / A[n-1][n-1]
+
+for i in range(n-2, -1, -1):
+    X[i] = A[i][n]
+    for j in range(i+1, n):
+        X[i] = X[i] - A[i][j] * X[j]
+    X[i] = X[i] / A[i][i]
+
+# Display solution
+print("\nSolution:")
+for i in range(n):
+    print(f"X[{i}] = {X[i]:0.2f}")
